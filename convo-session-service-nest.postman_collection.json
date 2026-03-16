@@ -1,0 +1,120 @@
+{
+  "info": {
+    "_postman_id": "322f6ae9-8e20-4d6b-8d4a-da615722bef0",
+    "name": "convo-session-service-nest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16451202"
+  },
+  "item": [
+    {
+      "name": "sessions",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"sessionId\": \"session-id-003\",\r\n    \"language\": \"en\",\r\n    \"metadata\": {\r\n        \"userName\": \"gangwar\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/sessions/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "sessions",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sessions/:sessionId/events",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"eventId\": \"event-id-001\",\r\n    \"type\": \"system\",\r\n    \"payload\": {\r\n        \"eventLive\": \"n/a\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/sessions/session-id-002/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "sessions",
+            "session-id-002",
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sessions/:sessionId/?limit&page",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/sessions/session-id-001?limit=10&pageNo=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "sessions",
+            "session-id-001"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "pageNo",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sessions/:sessionId/complete",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/sessions/session-id-001/complete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "sessions",
+            "session-id-001",
+            "complete"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

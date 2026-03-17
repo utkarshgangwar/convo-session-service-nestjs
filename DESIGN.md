@@ -55,18 +55,12 @@ Caching and monitoring systems were also left out to avoid unnecessary complexit
 
 The goal was to focus on correctness, clarity, and core backend design.
 
-6. Test Strategy
+6. Testing Strategy
 
-Tests are not fully implemented for all modules, but the approach would focus on testing core business logic.
+I added unit tests using Jest, mainly focusing on the service layer.
 
-Unit tests would be written for the service layer, especially:
+The repository is mocked so tests don’t depend on the database and only validate business logic.
 
-session creation (idempotency behavior)
+I covered cases like idempotent session creation and handling duplicate events by simulating MongoDB duplicate key errors.
 
-adding events (duplicate handling and validation)
-
-completing session (idempotent updates)
-
-Repository layer can be mocked to isolate business logic.
-
-For integration testing, API endpoints can be tested using a test database to validate end-to-end behavior.
+This keeps the tests simple, fast, and focused.

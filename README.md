@@ -19,7 +19,7 @@ POST /sessions/:sessionId/complete
 
 MongoDB required.
 
-MONGO_URI=mongodb://localhost:27017/conversation
+MONGO_URI=mongodb://localhost/convo-session-service
 
 ## Assumptions
 

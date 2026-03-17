@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Param, Body, Query, ParseIntPipe } from '@nestjs/common';
+import { Controller, Post, Get, Param, Body, Query } from '@nestjs/common';
 
 import { SessionService } from './sessions.service';
 import { CreateSessionDto } from './dto/create-session.dto';

@@ -8,6 +8,10 @@ npm install
 
 npm run start:dev
 
+## Test
+
+npm run test
+
 ## API Endpoints
 
 POST /sessions

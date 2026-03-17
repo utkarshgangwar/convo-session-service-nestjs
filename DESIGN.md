@@ -54,3 +54,19 @@ Background jobs, message queues, or streaming systems were also not included bec
 Caching and monitoring systems were also left out to avoid unnecessary complexity for this assignment.
 
 The goal was to focus on correctness, clarity, and core backend design.
+
+6. Test Strategy
+
+Tests are not fully implemented for all modules, but the approach would focus on testing core business logic.
+
+Unit tests would be written for the service layer, especially:
+
+session creation (idempotency behavior)
+
+adding events (duplicate handling and validation)
+
+completing session (idempotent updates)
+
+Repository layer can be mocked to isolate business logic.
+
+For integration testing, API endpoints can be tested using a test database to validate end-to-end behavior.
